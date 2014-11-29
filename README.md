@@ -1,6 +1,6 @@
 # npm-boilerplate [![Build Status](https://img.shields.io/travis/yuanqing/npm-boilerplate.svg?style=flat)](https://travis-ci.org/yuanqing/npm-boilerplate)
 
-> Barebones boilerplate with [`npm scripts`](https://www.npmjs.org/doc/cli/npm-run-script.html).
+> Barebones boilerplate using [`npm scripts`](https://www.npmjs.org/doc/cli/npm-run-script.html).
 
 ## Commands
 
@@ -22,4 +22,4 @@ Run the [Matcha](https://github.com/logicalparadox/matcha) benchmarks in `benchm
 
 ### `npm run build`
 
-Run the above 4 tasks.
+Run all of the above tasks.

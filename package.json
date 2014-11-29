@@ -1,7 +1,7 @@
 {
   "name": "npm-boilerplate",
   "version": "0.0.0",
-  "description": "Barebones boilerplate with `npm scripts`.",
+  "description": "Barebones boilerplate using `npm scripts`.",
   "author": "Lim Yuan Qing",
   "license": "MIT",
   "repository": {
