@@ -9,18 +9,21 @@
     "url": "git://github.com/yuanqing/npm-boilerplate.git"
   },
   "devDependencies": {
+    "browserify": "^6.3.3",
     "istanbul": "^0.3.2",
     "jshint": "^2.5.10",
     "jshint-stylish": "^1.0.0",
     "matcha": "^0.6.0",
-    "minijasminenode2": "^1.0.0"
+    "minijasminenode2": "^1.0.0",
+    "uglify-js": "^2.4.15"
   },
   "scripts": {
-    "build": "npm run lint && npm test && npm run cover && npm run bench",
-    "bench": "node_modules/.bin/matcha benchmark.js",
-    "lint": "node_modules/.bin/jshint --verbose --reporter=node_modules/jshint-stylish/stylish.js benchmark.js index.js test.js",
+    "lint": "node_modules/.bin/jshint --reporter=node_modules/jshint-stylish/stylish.js --verbose benchmark.js index.js test.js",
     "test": "node_modules/.bin/minijasminenode2 --verbose test.js",
-    "cover": "node_modules/.bin/istanbul cover node_modules/.bin/minijasminenode2 test.js"
+    "cover": "rm -rf coverage && node_modules/.bin/istanbul cover node_modules/.bin/minijasminenode2 test.js",
+    "bench": "node_modules/.bin/matcha benchmark.js",
+    "dist": "rm -rf dist && mkdir dist && node_modules/.bin/browserify index.js --debug --outfile dist/foo.js --standalone foo && node_modules/.bin/uglifyjs dist/foo.js --output dist/foo.min.js",
+    "build": "npm run lint && npm test && npm run cover && npm run bench && npm run dist"
   },
   "keywords": [
     "boilerplate"
