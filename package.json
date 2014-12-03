@@ -10,20 +10,31 @@
   },
   "devDependencies": {
     "browserify": "^6.3.3",
+    "browserify-istanbul": "^0.1.2",
     "istanbul": "^0.3.2",
+    "jasmine-core": "^2.1.3",
+    "jasmine-jquery": "^2.0.5",
+    "jquery": "^2.1.1",
     "jshint": "^2.5.10",
     "jshint-stylish": "^1.0.0",
+    "karma": "^0.12.28",
+    "karma-browserify": "^1.0.0",
+    "karma-cli": "0.0.4",
+    "karma-coverage": "^0.2.6",
+    "karma-jasmine": "^0.3.2",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "karma-spec-reporter": "0.0.13",
     "matcha": "^0.6.0",
     "minijasminenode2": "^1.0.0",
     "uglify-js": "^2.4.15"
   },
   "scripts": {
-    "lint": "node_modules/.bin/jshint --reporter=node_modules/jshint-stylish/stylish.js --verbose benchmark.js index.js test.js",
-    "test": "node_modules/.bin/minijasminenode2 --verbose test.js",
-    "cover": "rm -rf coverage && node_modules/.bin/istanbul cover node_modules/.bin/minijasminenode2 test.js",
+    "lint": "node_modules/.bin/jshint --reporter=node_modules/jshint-stylish/stylish.js --verbose index.js test/*.spec.js benchmark.js karma.conf.js",
+    "test": "rm -rf coverage && node_modules/.bin/istanbul cover -- node_modules/.bin/minijasminenode2 test/*.spec.js --verbose",
+    "test-b": "node_modules/.bin/karma start karma.conf.js --single-run",
     "bench": "node_modules/.bin/matcha benchmark.js",
     "dist": "rm -rf dist && mkdir dist && node_modules/.bin/browserify index.js --debug --outfile dist/foo.js --standalone foo && node_modules/.bin/uglifyjs dist/foo.js --output dist/foo.min.js",
-    "build": "npm run lint && npm test && npm run cover && npm run bench && npm run dist"
+    "build": "npm run lint && npm test && npm run test-b && npm run bench && npm run dist"
   },
   "keywords": [
     "boilerplate"

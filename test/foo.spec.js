@@ -1,7 +1,7 @@
 /* globals describe, it, expect */
 'use strict';
 
-var foo = require('./index.js');
+var foo = require('../index.js');
 
 describe('foo', function() {
 
