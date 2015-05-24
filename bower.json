@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "homepage": "https://github.com/yuanqing/npm-boilerplate",
   "authors": [
-    "Lim Yuan Qing <hello@yuanqing.sg>"
+    "Lim Yuan Qing"
   ],
-  "description": "Barebones boilerplate using `npm run-script`.",
+  "description": "",
   "license": "MIT",
   "ignore": [
     "**/.*",

@@ -1,19 +1,17 @@
 module.exports = function(config) {
   config.set({
     basePath: '.',
-    frameworks: ['jasmine', 'browserify'],
+    frameworks: ['browserify', 'tap'],
     browsers: ['PhantomJS'],
     plugins: [
       'browserify-istanbul',
       'karma-browserify',
       'karma-coverage',
-      'karma-jasmine',
       'karma-phantomjs-launcher',
-      'karma-spec-reporter'
+      'karma-tap'
     ],
     reporters: [
-      'coverage',
-      'spec'
+      'coverage'
     ],
     coverageReporter: {
       dir: 'coverage/',
@@ -24,7 +22,7 @@ module.exports = function(config) {
       ]
     },
     preprocessors: {
-      'test/*.spec.js': ['browserify']
+      'test/*.js': ['browserify']
     },
     browserify: {
       transform: [
@@ -38,9 +36,7 @@ module.exports = function(config) {
       ]
     },
     files: [
-      'node_modules/jquery/dist/jquery.min.js',
-      'node_modules/jasmine-jquery/lib/jasmine-jquery.js',
-      'test/*.spec.js',
+      'test/*.js',
       {
         pattern: 'test/fixtures/*.html',
         included: false,

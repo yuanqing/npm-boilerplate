@@ -1,6 +1,7 @@
 'use strict';
 
 var foo = function() {
+  return 42;
 };
 
-module.exports = exports = foo;
+module.exports = foo;
