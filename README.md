@@ -1,4 +1,4 @@
-# npm-boilerplate [![Build Status](https://img.shields.io/travis/yuanqing/npm-boilerplate.svg?style=flat)](https://travis-ci.org/yuanqing/npm-boilerplate)
+# npm-boilerplate [![Version](https://img.shields.io/badge/version-v0.1.0-orange.svg?style=flat)](https://github.com/yuanqing/npm-boilerplate/releases) [![Build Status](https://img.shields.io/travis/yuanqing/npm-boilerplate.svg?style=flat)](https://travis-ci.org/yuanqing/npm-boilerplate)
 
 > Barebones boilerplate using [`npm run-script`](https://www.npmjs.org/doc/cli/npm-run-script.html).
 
@@ -35,6 +35,11 @@ Bundle `index.js` as a standalone module, and write `foo.js` (with source map) a
 ### `npm run build`
 
 Run all of the above tasks.
+
+## Changelog
+
+- 0.1.0
+  - Initial release
 
 ## License
 
