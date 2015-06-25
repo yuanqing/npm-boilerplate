@@ -8,17 +8,19 @@
     "type": "git",
     "url": "git://github.com/yuanqing/npm-boilerplate.git"
   },
+  "dependencies": {},
   "devDependencies": {
-    "browserify": "^10.2.1",
+    "browserify": "^10.2.4",
     "browserify-istanbul": "^0.2.1",
-    "istanbul": "gotwarlost/istanbul#c87ada03cb485e4f9110224899b68d8dc27e4bf3",
-    "jshint": "^2.7.0",
-    "karma": "^0.12.32",
+    "istanbul": "^0.3.16",
+    "jshint": "^2.8.0",
+    "karma": "^0.12.37",
     "karma-browserify": "^4.2.1",
     "karma-cli": "0.0.4",
-    "karma-coverage": "^0.3.1",
-    "karma-phantomjs-launcher": "^0.1.4",
+    "karma-coverage": "^0.4.2",
+    "karma-phantomjs-launcher": "^0.2.0",
     "karma-tap": "^1.0.3",
+    "karma-tape-reporter": "^1.0.3",
     "matcha": "^0.6.0",
     "tape": "^4.0.0",
     "uglify-js": "^2.4.23"
@@ -31,7 +33,5 @@
     "dist": "rm -rf dist && mkdir dist && browserify index.js --debug --outfile dist/foo.js --standalone foo && uglifyjs dist/foo.js --output dist/foo.min.js",
     "build": "npm run lint && npm test && npm run test-browser && npm run benchmark && npm run dist"
   },
-  "keywords": [
-    "boilerplate"
-  ]
+  "keywords": []
 }
