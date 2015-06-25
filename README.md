@@ -43,4 +43,4 @@ Run all of the above tasks.
 
 ## License
 
-[MIT](https://github.com/yuanqing/npm-boilerplate/blob/master/LICENSE)
+[MIT](LICENSE.md)
