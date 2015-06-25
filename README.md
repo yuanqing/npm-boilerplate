@@ -36,11 +36,6 @@ Bundle `index.js` as a standalone module, and write `foo.js` (with source map) a
 
 Run all of the above tasks.
 
-## Changelog
-
-- 0.1.0
-  - Initial release
-
 ## License
 
 [MIT](LICENSE.md)
