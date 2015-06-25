@@ -8,10 +8,12 @@ module.exports = function(config) {
       'karma-browserify',
       'karma-coverage',
       'karma-phantomjs-launcher',
-      'karma-tap'
+      'karma-tap',
+      'karma-tape-reporter'
     ],
     reporters: [
-      'coverage'
+      'coverage',
+      'tape'
     ],
     coverageReporter: {
       dir: 'coverage/',
